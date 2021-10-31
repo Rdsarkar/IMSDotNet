@@ -9,7 +9,7 @@ namespace IMS.Models
     {
         public decimal? Sid { get; set; }
         public decimal? Floor { get; set; }
-        public string BuildingName { get; set; }
+        public string Buildingname { get; set; }
         public string Zone { get; set; }
         public decimal? Area { get; set; }
     }

@@ -19,7 +19,7 @@ namespace IMS
     {
         public decimal? Sid { get; set; }
         public decimal? Floor { get; set; }
-        public string BuildingName { get; set; }
+        public string Buildingname { get; set; }
     }
 
     public class SelfClass3
@@ -127,7 +127,7 @@ namespace IMS
                     Payload = null
                 });
             }
-            if (input.BuildingName == null)
+            if (input.Buildingname == null)
             {
                 return StatusCode(StatusCodes.Status400BadRequest, new ResponseDto
                 {
@@ -148,7 +148,7 @@ namespace IMS
                 });
             }
             shelves1.Floor = input.Floor;
-            shelves1.BuildingName = input.BuildingName;
+            shelves1.Buildingname = input.Buildingname;
 
 
             _context.Shelves.Update(shelves1);
@@ -309,7 +309,7 @@ namespace IMS
                     Payload = null
                 });
             }
-            if (input.BuildingName == null)
+            if (input.Buildingname == null)
             {
                 return StatusCode(StatusCodes.Status400BadRequest, new ResponseDto
                 {

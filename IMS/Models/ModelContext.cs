@@ -24,7 +24,7 @@ namespace IMS.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseOracle("Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=XEPDB1)));Persist Security Info=True;User Id=shop;Password=oracle;");
+                optionsBuilder.UseOracle("Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1522))(CONNECT_DATA=(SERVICE_NAME=XEPDB1)));Persist Security Info=True;User Id=shop;Password=oracle;");
             }
         }
 
@@ -45,10 +45,10 @@ namespace IMS.Models
                     .HasColumnType("NUMBER(38)")
                     .HasColumnName("AREA");
 
-                entity.Property(e => e.BuildingName)
+                entity.Property(e => e.Buildingname)
                     .HasMaxLength(100)
                     .IsUnicode(false)
-                    .HasColumnName("BUILDING_NAME");
+                    .HasColumnName("BUILDINGNAME");
 
                 entity.Property(e => e.Floor)
                     .HasColumnType("NUMBER(38)")
